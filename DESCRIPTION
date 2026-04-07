@@ -1,31 +1,33 @@
 Package: drhutools
 Type: Package
 Title: Political Science Academic Research Gears
-Version: 1.0.1
+Version: 1.1.0
 Authors@R: 
   c(
   person("Yue", "Hu", role = c("aut", "cre"), email = "yuehu@tsinghua.edu.cn"),
   person("Qian", "Qiu", role = c("ctb"), email = "mathildaqiu@tsinghua.edu.cn"),
-  person("Wen", "Deng", role = c("ctb"), email = "dengwenjoy@outlook.com")
+  person("Wen", "Deng", role = c("ctb"), email = "dengwenjoy@outlook.com"),
+  person("Bear", "Braumoeller", role = c("ctb"), comment = "QCAfalsePositive functions")
   )
 Maintainer: Yue Hu <yuehu@tsinghua.edu.cn>
-Description: Using these tools to simplify the research process of political science and other social sciences. The current version can create folder system for academic project in political science, calculate psychological trait scores, visualize experimental and spatial data, and set up color-blind palette, functions used in academic research of political psychology or political science in general.
+Description: Using these tools to simplify the research process of political science and other social sciences. The current version can create folder system for academic project in political science, calculate psychological trait scores, visualize experimental and spatial data, set up color-blind palette, and test for Type I error (false positives) in Qualitative Comparative Analysis (QCA) for crisp-set, multi-value, and fuzzy-set variants.
 URL: https://www.drhuyue.site/software/drhutools/
 BugReports: https://github.com/sammo3182/drhutools/issues
-License: MIT + file LICENSE
+License: GPL (>= 3)
 Encoding: UTF-8
 Depends: R (>= 4.1.0)
 Imports: dplyr, ggplot2, purrr, htmltools, sf, htmlwidgets, jsonlite,
         leaflet, sp, stats, methods, gganimate, magick, webshot,
-        animation, png, grDevices
+        animation, png, grDevices, graphics
 LazyData: true
 RoxygenNote: 7.3.3
 Suggests: knitr, remotes, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2025-12-02 21:21:20 UTC; HU Yue
+Packaged: 2026-04-07 03:00:52 UTC; yuehu
 Author: Yue Hu [aut, cre],
   Qian Qiu [ctb],
-  Wen Deng [ctb]
+  Wen Deng [ctb],
+  Bear Braumoeller [ctb] (QCAfalsePositive functions)
 Repository: CRAN
-Date/Publication: 2025-12-04 06:10:02 UTC
+Date/Publication: 2026-04-07 05:20:14 UTC

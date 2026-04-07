@@ -144,3 +144,33 @@ names(toy_data) <- column_names
 
 traits(toy_data)
 
+## ----csQCA-test---------------------------------------------------------------
+test_cs <- csQCAbinTest(
+  freq.y      = 0.7,
+  configs     = list(aB = 5, bCD = 3, Ce = 2),
+  total.configs = 20
+)
+summary(test_cs)
+
+## ----fsQCA-data---------------------------------------------------------------
+head(social.revolutions)
+
+## ----fsQCA-test, cache=TRUE---------------------------------------------------
+intersect  <- pmin(social.revolutions$breakdown, social.revolutions$pop.ins)
+intersect2 <- pmin(social.revolutions$breakdown, 1 - social.revolutions$pop.ins)
+intersect3 <- pmin(1 - social.revolutions$breakdown, social.revolutions$pop.ins)
+intersect4 <- pmin(1 - social.revolutions$breakdown, 1 - social.revolutions$pop.ins)
+
+# num.iter is reduced here for illustration; use the default 10,000 in practice
+test_fs <- fsQCApermTest(
+  y             = social.revolutions$soc.rev,
+  configs       = list(BI = intersect, Bi = intersect2,
+                       bI = intersect3, bi = intersect4),
+  total.configs = 4,
+  num.iter      = 500
+)
+summary(test_fs)
+
+## ----fsQCA-plot, fig.width=7, fig.height=7, fig.cap="Permutation distributions for four fsQCA configurations. Dark blue marks the critical region after multiple-testing adjustment; the black dot is the observed value."----
+plot(test_fs)
+
