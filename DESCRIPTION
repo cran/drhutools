@@ -1,7 +1,7 @@
 Package: drhutools
 Type: Package
 Title: Political Science Academic Research Gears
-Version: 1.1.0
+Version: 1.1.1
 Authors@R: 
   c(
   person("Yue", "Hu", role = c("aut", "cre"), email = "yuehu@tsinghua.edu.cn"),
@@ -20,14 +20,14 @@ Imports: dplyr, ggplot2, purrr, htmltools, sf, htmlwidgets, jsonlite,
         leaflet, sp, stats, methods, gganimate, magick, webshot,
         animation, png, grDevices, graphics
 LazyData: true
-RoxygenNote: 7.3.3
 Suggests: knitr, remotes, rmarkdown
 VignetteBuilder: knitr
+Config/roxygen2/version: 8.0.0
 NeedsCompilation: no
-Packaged: 2026-04-07 03:00:52 UTC; yuehu
+Packaged: 2026-06-04 04:04:04 UTC; yuehu
 Author: Yue Hu [aut, cre],
   Qian Qiu [ctb],
   Wen Deng [ctb],
   Bear Braumoeller [ctb] (QCAfalsePositive functions)
 Repository: CRAN
-Date/Publication: 2026-04-07 05:20:14 UTC
+Date/Publication: 2026-06-04 04:20:02 UTC

@@ -1,4 +1,15 @@
-# drhutools 1.1.0
+# drhutools 1.1.2
+
+# 1.1.1
+
+- `goodmap` now correctly draws on the Amap (AutoNavi) Chinese basemap by default instead of OpenStreetMap:
+  - New `tile_source` argument (`"amap"` default, or `"osm"`) selects the basemap provider.
+  - New `coord` argument (`"WGS-84"` default, `"GCJ-02"`, or `"BD-09"`) declares the coordinate system of point input; points are reprojected to match the basemap so markers align with the tiles.
+  - Added an internal closed-form WGS-84 / GCJ-02 / BD-09 coordinate converter (no new dependency).
+- Added a default `.gitignore` file into `folderSystem`
+- `folderSystem` now copies the bundled manuscript templates (Quarto/Typst paper template, main/appendix bibliographies, OSCOLA citation style, and the citation-prefix Lua filter) into `paper/`, with an `overwrite` argument to control replacing existing files
+
+# 1.1.0
 
 - Absorbed functions from Bear Braumoeller's archived CRAN package `QCAfalsePositive` for continued accessibility:
   - `csQCAbinTest`: binomial test for Type I error in crisp-set QCA
@@ -9,22 +20,22 @@
 - Added two datasets: `Arab.Spring` and `social.revolutions`
 - Relicensed from MIT to GPL (>= 3) to comply with the source package license
 
-# drhutools 1.0.1
+# 1.0.1
 
 - Fixed the issue caused by `mapview`
 - Add reference information in `traits`
 - Add more information in the output of `traits`
 
-# drhutools 1.0.0
+# 1.0.0
 
 - Add new function `goodmap`
 - CRAN submission
 
-# drhutools 0.1.2
+# 0.1.2
 
 - `folderSystem` create the folder system automatically at the project's root directory.
 
-# drhutools 0.1.1
+# 0.1.1
 
 - Removed the useless functions:
   - `textWrapper` has been superseded by `ggfittext` functions.
@@ -34,7 +45,6 @@
 - Added the `folderSystem` function
 - Clean the document
 
-
-# drhutools 0.1.0
+# 0.1.0
 
 The initial release of the package.
